@@ -32,9 +32,9 @@
     <div class="card col-md-4" v-for="item in d.collection.items">
       <img v-for="elemento in item.data" v-if="elemento.name =='imagen'" class="card-img-top" v-bind:src="elemento.value" alt="Card image cap">
       <div class="card-body">
-        <h5 v-for="tod in item.data" v-if="tod.name=='name'">{{tod.value}}</h5>
+        <h5 class= "card-title"> {{ titulopelicula(item) }}</h5>
         <ul>
-          <li v-for="tod in item.data" v-if="tod.name!='name'  && tod.name!='imagen'">
+          <li v-for="tod in item.data" v-if="tod.name!='name' && tod.name!='imagen'">
             <strong>{{tod.prompt}}:</strong>
             <i>{{ tod.value }}</i>
           </li>        

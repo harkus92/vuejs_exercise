@@ -47,5 +47,21 @@ var app = new Vue({
   el: '#app',
   data: {
     d: server_data
+  },
+  methods: 
+  {
+    titulopelicula: function(item)
+    {
+      var resultado;
+
+      for(var i = 0; i < item.data.length;i++)
+      {
+        if(item.data[i].name == 'name')
+        {
+            resultado = item.data[i].value;
+        }
+      }
+      return resultado;
+    }
   }
 });
